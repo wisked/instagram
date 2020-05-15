@@ -12,14 +12,12 @@ app.use(bodyParser.json({ limit: '200mb' }));
 app.use(bodyParser.urlencoded({ limit: '200mb', extended: true }));
 
 app.get('/posts', (req, res) => {
-  console.log(req.query);
-  
+  // const postsQuantity = req.query.quantity || 10;
   res.status(200).json(getPosts());
 });
 
 app.get('/post/:id?', (req, res) => {
-  console.log(req.query);
-  const post = getPosts().find(({id}) => id === req.params.id);
+  const post = getPosts().find(({id}) => id == req.params.id);
   res.status(200).json(post);
 });
 
