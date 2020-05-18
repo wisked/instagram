@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-const { getPosts } = require('./mockData/data');
+const { getPosts, getCommets } = require('./mockData/data');
 
 const app = express();
 const port = 8080;
@@ -18,6 +18,8 @@ app.get('/posts', (req, res) => {
 
 app.get('/post/:id?', (req, res) => {
   const post = getPosts().find(({id}) => id == req.params.id);
+  const comments = post && getCommets().getCommetById(post.id);
+  if (post) post.comments_data = comments; 
   res.status(200).json(post);
 });
 

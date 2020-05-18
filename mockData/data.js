@@ -107,13 +107,50 @@ exports.getPosts = () => {
   ];
 }
 
+const comments = {
+  "1": [
+    {
+      "text": "What is funny day",
+      "user": "Max",
+      user_id: 1,
+    },
+    {
+      "text": "What is funny day",
+      "user": "Max",
+      user_id: 1,
+    },
+    {
+      "text": "What is funny day",
+      "user": "Max",
+      user_id: 1,
+    },
+  ],
+  "9": [
+    {
+      "text": "What is funny day",
+      "user": "Max",
+      user_id: 1,
+    },
+    {
+      "text": "What is funny day",
+      "user": "Max",
+      user_id: 1,
+    },
+    {
+      "text": "What is funny day",
+      "user": "Max",
+      user_id: 1,
+    },
+  ],
+};
+
 exports.getCommets = () => {
   return {
-    "1": [
-      {
-        "text": "What is funny day",
-        "user": "Max"
-      },
-    ],
-  };
+    getCommetById(id) {
+      return comments[id];
+    },
+    getAllComments() {
+      return comments;
+    },
+  }
 };
