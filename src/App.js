@@ -5,7 +5,7 @@ import {
   Route,
 } from 'react-router-dom';
 
-import { NavigationTopBar, SighUp, PostsLayout, PostPage } from './components/declarations'; 
+import { NavigationTopBar, SighUp, PostsLayout, PostPage, UserPage } from './components/declarations'; 
 import './App.css';
 
 function App() {
@@ -22,6 +22,7 @@ function App() {
           <PostsLayout />
         </Route>
         <Route path="/post/:id" component={PostPage} />
+        <Route path="/user/:userName" component={UserPage} />
       </Switch>
     </Router>
   );
