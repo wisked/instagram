@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const fs = require('fs');
 
 const { getPosts, getCommets } = require('./mockData/data');
 
@@ -18,6 +19,16 @@ app.get('/posts', (req, res) => {
 
 app.get('/post/:id?', (req, res) => {
   const post = getPosts().find(({id}) => id == req.params.id);
+  if (req.query) {
+    switch (req.query.q) {
+      case 'like':
+        res.sendStatus(200);
+        break;
+    
+      default:
+        break;
+    }
+  }
   const comments = post && getCommets().getCommetById(post.id);
   if (post) post.comments_data = comments; 
   res.status(200).json(post);
