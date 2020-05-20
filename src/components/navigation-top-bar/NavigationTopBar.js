@@ -13,10 +13,11 @@ export class NavigationTopBar extends React.Component {
             <p>Fake <span>Instagram</span></p>
           </div>
           <NavigationTopSearch />
-          <nav id="nav">
-            <ul>
-              <li>Sign in</li>
+          <nav className="navigation-container">
+            <ul className="navigation-links">
+              <li><Link to="/signin">Sign in</Link> </li>
               <li><Link to="/signup">Sign up</Link></li>
+              <li><Link to="/top-post">Top post</Link></li>
             </ul>
           </nav>
         </div>
