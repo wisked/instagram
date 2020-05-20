@@ -13,12 +13,56 @@
 .app__post .caption {
   opacity: 0;
   position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  text-align: center;
+  color: aliceblue;
 }
 
 .app__post:hover .caption, .app__post:hover {
   opacity: 1;
   transition: opacity .75s ease-out;
-  filter: grayscale(100%);
+  filter: grayscale(45%);
+}
+
+.image-title {
+  padding-top: 10px;
+  padding-bottom: 25px;
+  display: inline-block;
+}
+
+.caption-controls {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.caption-controls svg {
+  cursor: pointer;
+}
+.caption-controls .caption-controls__data {
+  padding-left: 15px;
+  height: 100%;
+}
+
+.navigation-before, .navigation-next {
+  position: absolute;
+  top: 49%;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.navigation-before:hover, .navigation-next:hover {
+  transform: scale(1.4);
+}
+
+.navigation-before {
+  left: 0;
+}
+
+.navigation-next {
+  right: 0;
 }
 
 @media (max-width:760px) {

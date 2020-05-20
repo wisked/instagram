@@ -8,7 +8,6 @@ const getAccountDataEndpoint = 'http://localhost:8080/account';
 
 export function UserPage(props) {
   const [accountData, setAccountData] = useState(null);
-  console.log(props)
   // const { id } = useParams();
   const { location } = useLocation();
 

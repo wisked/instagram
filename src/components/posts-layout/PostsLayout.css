@@ -1,3 +1,6 @@
 .app__posts-layout {
-  margin: 40px 0;
+  margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
