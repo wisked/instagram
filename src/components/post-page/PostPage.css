@@ -1,0 +1,89 @@
+.app__post-page {
+  display: flex;
+  z-index: 10000;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0,0,0, .5);
+  align-items: center;
+  justify-content: center;
+}
+
+.post-container {
+  max-width: 95%;
+}
+
+.close-btn {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+.post-close {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn svg {
+  color: white;
+  cursor: pointer;
+}
+
+.post-layout {
+  display: flex;
+}
+.image-container {
+  flex-basis: 65%;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+}
+
+.app__post-page-comments {
+  flex-basis: 35%;
+  background-color: whitesmoke;
+}
+
+.account-container {
+  display: flex;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.account-container_header {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-bottom: 1px solid gainsboro;
+}
+
+.account-image {
+  width: 80px;
+  border-radius: 50%;
+  padding: 12px;
+}
+
+.account-image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.account-data {
+  margin: auto 10px;
+}
+
+.comments-container {
+  overflow-y: auto;
+}
+
+.account-title {
+  font-size: 12px;
+}
+
+.account-comment {
+  font-size: 10px;
+}

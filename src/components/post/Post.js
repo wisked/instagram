@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 import { FavoriteBorder, CommentOutlined, NavigateBefore, NavigateNext } from '@material-ui/icons';
 import axios from 'axios';
 
@@ -14,7 +14,7 @@ export function Post(props) {
   const [imageIndex, setImageIndex ] = useState(0);
   
   function handleClick() {
-    history.push(`/post/${props.data.id}`);
+    history.push(`/top-posts/post/${props.data.id}`);
   }
 
   function handleClickLike(event) {

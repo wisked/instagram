@@ -17,7 +17,7 @@ export class NavigationTopBar extends React.Component {
             <ul className="navigation-links">
               <li><Link to="/signin">Sign in</Link> </li>
               <li><Link to="/signup">Sign up</Link></li>
-              <li><Link to="/top-post">Top post</Link></li>
+              <li><Link to="/top-posts">Top post</Link></li>
             </ul>
           </nav>
         </div>
