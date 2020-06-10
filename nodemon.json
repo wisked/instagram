@@ -1,0 +1,12 @@
+{
+  "watch": [
+    "api",
+    ".env",
+    "server.ts"
+  ],
+  "ext": "js,ts,json",
+  "ignore": [
+    "api/**/*.spec.ts"
+  ],
+  "exec": "ts-node  --transpile-only ./server.ts"
+}
